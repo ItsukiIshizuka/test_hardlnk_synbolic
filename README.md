@@ -23,24 +23,26 @@ https://ameblo.jp/julieta0089/entry-11267155850.html<br>
 // リンク元ファイルの確認
 $ ls -al
 
-drwxr-xr-x   7 ishizukaitsuki  staff    224  7  5 10:53 .
-drwx------@ 19 ishizukaitsuki  staff    608  7  5 10:16 ..
--rw-r--r--   3 ishizukaitsuki  staff      6  7  5 10:41 test_origin.txt
+30986465 drwxr-xr-x   7 *** ***   224  7  5 10:53 .
+15799272 drwx------@ 19 *** ***   608  7  5 10:16 ..
+30988415 -rw-r--r--   3 *** ***     6  7  5 10:41 test_origin.txt
 
-// ハードリンク作成
+// ハードリンク作成・ファイル確認
 $ ln test_origin.txt lnk_h.ln
+$ ls -ail
 
-drwxr-xr-x   7 *** ***   224  7  5 10:53 .
-drwx------@ 19 *** ***   608  7  5 10:16 ..
--rw-r--r--   3 *** ***     6  7  5 10:41 test_origin.txt
--rw-r--r--   3 *** ***     6  7  5 10:41 lnk_h.ln
+30986465 drwxr-xr-x   7 *** ***   224  7  5 10:53 .
+15799272 drwx------@ 19 *** ***   608  7  5 10:16 ..
+30988415 -rw-r--r--   3 *** ***     6  7  5 10:41 test_origin.txt
+30988415 -rw-r--r--   3 *** ***     6  7  5 10:41 lnk_h.ln
 
-// シンボリックリンク作成
+// シンボリックリンク作成・ファイル確認
 $ ln -s test_origin.txt lnk_s.ln
+$ ls -ail
 
-drwxr-xr-x   7 *** ***    224  7  5 10:53 .
-drwx------@ 19 *** ***    608  7  5 10:16 ..
--rw-r--r--   3 *** ***      6  7  5 10:41 test_origin.txt
-lrwxr-xr-x   1 *** ***      9  7  5 10:47 lnk_s.ln -> test_origin.txt
--rw-r--r--   3 *** ***      6  7  5 10:41 lnk_h.ln
+30986465 drwxr-xr-x   7 *** ***   224  7  5 10:53 .
+15799272 drwx------@ 19 *** ***   608  7  5 10:16 ..
+30988415 -rw-r--r--   3 *** ***     6  7  5 10:41 test_origin.txt
+30988415 -rw-r--r--   3 *** ***     6  7  5 10:41 lnk_h.ln
+30994578 lrwxr-xr-x   1 *** ***     9  7  5 10:47 lnk_s.ln -> test_origin.txt
 ```
